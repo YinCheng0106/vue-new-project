@@ -1,19 +1,18 @@
 <script setup>
-import HelloWorld from './components/HelloWorld.vue'
-import TheWelcome from './components/TheWelcome.vue'
+import HelloWorld from './components/HelloWorld.vue';
+import ProjectMenu from './components/ProjectMenu.vue';
 </script>
 
 <template>
   <header>
-    <img alt="Vue logo" class="logo" src="./assets/logo.svg" width="125" height="125" />
-
     <div class="wrapper">
-      <HelloWorld msg="You did it!" />
+      <a href="https://github.com/YINLA-TEAM"><img class="logo" src="/favicon.ico" alt="YINLA_v2"></a>
+      <HelloWorld msg="YINLA" />
     </div>
   </header>
 
   <main>
-    <TheWelcome />
+    <ProjectMenu />
   </main>
 </template>
 
@@ -23,8 +22,10 @@ header {
 }
 
 .logo {
+  height: 64px;
   display: block;
   margin: 0 auto 2rem;
+  border-radius: 24px;
 }
 
 @media (min-width: 1024px) {

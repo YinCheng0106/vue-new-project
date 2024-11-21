@@ -1,6 +1,6 @@
 <script setup>
 defineProps({
-  msg: {
+  title: {
     type: String,
     required: true,
   },
@@ -9,9 +9,8 @@ defineProps({
 
 <template>
   <div class="greetings">
-    <h1 class="gary">{{ msg }}</h1>
-    <h3>
-    </h3>
+    <h1 class="gary">{{ title }}</h1>
+    <h3></h3>
   </div>
 </template>
 
@@ -20,7 +19,6 @@ h1 {
   font-weight: 500;
   font-size: 2.6rem;
   position: relative;
-  top: -10px;
 }
 
 h3 {

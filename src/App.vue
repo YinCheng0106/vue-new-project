@@ -1,5 +1,5 @@
 <script setup>
-import HelloWorld from './components/HelloWorld.vue';
+import WebTitle from './components/WebTitle.vue';
 import ProjectMenu from './components/ProjectMenu.vue';
 </script>
 
@@ -7,13 +7,16 @@ import ProjectMenu from './components/ProjectMenu.vue';
   <header>
     <div class="wrapper">
       <a href="https://github.com/YINLA-TEAM"><img class="logo" src="/favicon.ico" alt="YINLA_v2"></a>
-      <HelloWorld msg="YINLA" />
+      <WebTitle title="YINLA" />
     </div>
   </header>
 
   <main>
     <ProjectMenu />
   </main>
+  <footer>
+    Copyright © 2024 YINLA. All rights reserved.
+  </footer>
 </template>
 
 <style scoped>
@@ -26,6 +29,10 @@ header {
   display: block;
   margin: 0 auto 2rem;
   border-radius: 24px;
+}
+
+footer {
+  text-align: center;
 }
 
 @media (min-width: 1024px) {

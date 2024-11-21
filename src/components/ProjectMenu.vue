@@ -39,6 +39,14 @@ const project_list = ref([
     }
 
     li {
-        
+        border-radius: 12px;
+        padding: 12px;
+        list-style-type: none
+    }
+
+    @media (hover: hover) {
+        li:hover {
+            background-color: rgb(255, 255, 255, 0.2);
+        }
     }
 </style>

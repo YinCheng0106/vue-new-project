@@ -1,6 +1,6 @@
 <script setup>
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
-import { faLink } from '@fortawesome/free-solid-svg-icons';
+import { faLink, faExternalLink } from '@fortawesome/free-solid-svg-icons';
 import { ref } from 'vue';
 let id = 0;
 const project_list = ref([
@@ -12,30 +12,45 @@ const project_list = ref([
 
 <template>
     <div>
-        <h3>PROJECT</h3>
+        <h2>PROJECT</h2>
     </div>
     <div>
         <ul>
             <li v-for="project in project_list" :key="project.id">
-                <img class="project_img" src=/favicon.ico>
+                <img class="project_img" :src="project.img">
                 <h3>{{ project.name }}</h3>
                 <p>{{ project.desc }}</p>
-                <a href="https://github.com/YINLA-TEAM/YINLA"><FontAwesomeIcon :icon="faLink" /> GitHub</a>
+                <a class="project_link" :href="project.link" target="_blank">GitHub <FontAwesomeIcon :icon="faExternalLink"/></a>
             </li>
         </ul>
     </div>
 </template>
 
 <style scoped>
-    h3 {
+    h2,h3 {
+        font-weight: bold;
         font-family: monospace;
         font-size: 1.2rem;
     }
 
     .project_img {
         height: 64px;
+        margin-left: 12px;
         float: right;
         border-radius: 12px;
+    }
+
+    .project_link {
+        /* float: right; */
+        padding: 4px;
+        text-align: center;
+        color: black;
+        background-color: rgba(255, 255, 255, 0.5);
+        border-radius: 4px;
+    }
+
+    .project_link:hover {
+        background-color: rgb(255, 255, 255);
     }
 
     li {

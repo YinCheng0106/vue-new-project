@@ -10,7 +10,7 @@ defineProps({
 <template>
   <div class="greetings">
     <h1 class="gary">{{ title }}</h1>
-    <h3></h3>
+    <h3>創新、解決問題、為民服務</h3>
   </div>
 </template>
 

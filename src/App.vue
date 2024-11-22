@@ -1,9 +1,23 @@
 <script setup>
+import { ref } from 'vue';
 import WebTitle from './components/WebTitle.vue';
 import ProjectMenu from './components/ProjectMenu.vue';
+let id = 0;
+const nav_link = ref([
+  { id: id++, text: "GitHub", link: "https://github.com/YINLA-TEAM" },
+  { id: id++, text: "Discord", link: "https://discord.gg/mnCHdBbh65" }
+]);
 </script>
 
 <template>
+  <nav>
+    <ul>
+      <li v-for="nav in nav_link" :key="nav.id">
+        <a :href=nav.link target="_blank">{{ nav.text }}</a>
+      </li>
+    </ul>
+  </nav>
+
   <header>
     <div class="wrapper">
       <a href="https://github.com/YINLA-TEAM"><img class="logo" src="/favicon.ico" alt="YINLA_v2"></a>
@@ -14,12 +28,26 @@ import ProjectMenu from './components/ProjectMenu.vue';
   <main>
     <ProjectMenu />
   </main>
-  <footer>
+
+  <footer class="footer">
     Copyright © 2024 YINLA. All rights reserved.
   </footer>
 </template>
 
 <style scoped>
+nav {
+  margin: 0;
+  padding: 0;
+}
+
+ul,li {
+  display: flex;
+  gap: 12px;
+  border-radius: 12px;
+  padding: 12px;
+  list-style-type: none;
+}
+
 header {
   line-height: 1.5;
 }
@@ -31,7 +59,7 @@ header {
   border-radius: 24px;
 }
 
-footer {
+.footer {
   text-align: center;
 }
 

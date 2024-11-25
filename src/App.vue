@@ -22,6 +22,7 @@ const nav_link = ref([
     <div class="wrapper">
       <a href="https://github.com/YINLA-TEAM"><img class="logo" src="/favicon.ico" alt="YINLA_v2"></a>
       <WebTitle title="YINLA" />
+      <img class="skills" src="https://skillicons.dev/icons?i=html,css,js,py,md,vue,vite,docker,discordjs" alt="Skills : html,css,js,py,md,vue,vite,docker,discordjs">
     </div>
   </header>
 
@@ -54,13 +55,20 @@ header {
 
 .logo {
   height: 64px;
-  display: block;
-  margin: 0 auto 2rem;
+  display: flex;
+  margin: 0 auto;
   border-radius: 24px;
+}
+
+.skills {
+  display: block;
+  margin: 0 auto;
 }
 
 .footer {
   text-align: center;
+  margin-top: auto;
+  padding: 1rem 0;
 }
 
 @media (min-width: 1024px) {
